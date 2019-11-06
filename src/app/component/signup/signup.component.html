@@ -1,0 +1,140 @@
+<app-header></app-header>
+<!-- login_section -->
+<section class="login_page">
+    <div class="container">
+      <div class="row">
+          <div class="col-md-8">
+              <h1 class="signup_heading">Create an account to make <br> booking even faster!</h1>
+              <p class="signup_info">Enjoy a range of travel <br> benefits when you sign up</p>
+              <p>Hints and tips on using My Account</p>
+          <p><a href="#" class="btn btn-primary btn-lg">Account guide</a></p>
+          </div>
+
+
+        <div class="col-md-4">
+          <div class="main_div">
+             <div class="login_header">
+                <img src="assets/images/login/your-account.png">
+               <p class="login_title"> <span>Log In</span></p>
+             </div>
+             <div class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="errMsg">
+              <strong>Error!</strong> {{message}}
+              <button type="button" class="close" (click)="errMsgHide()" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              </div>
+              <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="sucMsg">
+                <strong>Success!</strong> {{message}}
+                <button type="button" class="close" (click)="sucMsgHide()" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+             <div class="card-body">
+                <div class="l_fb">
+                   <a>
+                      <div class="float-left f_btn1">F </div>  
+                      <div class="f_btn2" (click)="signInWithFB()">LOG IN WITH FACEBOOK</div>
+                   </a>
+                </div>
+                <div class="l_fb2">
+                   <a>
+                      <div class="float-left f_btn_a">G+</div>
+                      <div class="f_btn_b" (click)="socialSignIn('google')">LOG IN WITH GOOGLE+</div>
+                   </a>
+                </div>
+                <p class="text-center">Or</p>
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text" id="btnGroupAddon">@</div>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="userModel.name" placeholder="Enter your Name"><br /><br />
+                    <span>{{addValidationError.name}}</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text" id="btnGroupAddon">@</div>
+                    </div>
+                    <input type="email" class="form-control" [(ngModel)]="userModel.email" placeholder="Enter Email" aria-label="Input group example" aria-describedby="btnGroupAddon"><br /><br />
+                    <span>{{addValidationError.email}}</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                       <div class="input-group-text" id="btnGroupAddon">@</div>
+                    </div>
+                    <input type="password" class="form-control" [(ngModel)]="userModel.password" placeholder="Enter Password" aria-label="Input group example" aria-describedby="btnGroupAddon"><br /><br />
+                    <span>{{addValidationError.password}}</span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text" id="btnGroupAddon">@</div>
+                    </div>
+                    <input type="password" class="form-control" [(ngModel)]="userModel.confirmPassword" placeholder="Enter Password Again" aria-label="Input group example" aria-describedby="btnGroupAddon"><br /><br />
+                    <span>{{addValidationError.confirmPassword}}</span>
+                  </div>
+                </div>
+
+               
+             </div>
+
+              <footer class="s_up">
+                 <a (click)="register()" class="text-white">Sign Up</a>
+              </footer>
+          </div><!--main_d-->
+        </div>
+      </div>
+    </div>
+  </section>
+ <!-- /login_section -->
+
+  <section class="sign_up_section_2">
+    <div class="container">
+      <div class="signup_wrap">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="sign_up_box">
+              <img src="assets/images/login/baggage.svg" class="icons_a">
+              Purchase additional baggage
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="sign_up_box">
+              <img src="assets/images/login/payment.svg" class="icons_a">
+              See your saved credit cards
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="sign_up_box">
+              <img src="assets/images/login/check-in.svg" class="icons_a">
+              Get check in links to airlines websites
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="sign_up_box">
+              <img src="assets/images/login/book-faster.svg" class="icons_a">
+              Book faster next time
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="sign_up_box">
+              <img src="assets/images/login/list.svg" class="icons_a">
+              See all your past and future bookings
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="sign_up_box">
+              <img src="assets/images/login/seats.svg" class="icons_a">
+              Select seats
+            </div>
+          </div>
+        </div><!--//row--> 
+      </div>
+    </div>
+  </section>
+<app-footer></app-footer>

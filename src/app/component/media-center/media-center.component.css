@@ -1,0 +1,143 @@
+body {
+    color: #495662;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+}
+  section.m-centre {
+    background-image: url(../../../assets/images/aeroplane-clouds.jpg);
+    padding: 90px 0px;
+    background-color: #eee;
+    background-size: 100%;
+  }
+.nav-scroller.nav2 {
+    border-top: 1px solid #313131;
+    border-bottom: 1px solid #74b9ff;
+    padding: 10px 0px;
+}
+span.m_c1 a {
+    color: #005baa;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+}
+.m_divider {
+    width: 1rem;
+    border-top: 2px solid #fff;
+    margin: 0 auto;
+    border-color: inherit;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.m_divider2 {
+    width: 1rem;
+    border-top: 5px solid #495662;
+    border-color: inherit;
+    margin: 20px 0px;
+}
+.media_c {
+    text-align: center;
+}
+section.t_stories {
+    background-color: #eee;
+    padding: 60px 0px;
+}
+@media (min-width: 768px){
+  .content_box3 {
+    background-color: #fff;
+    padding: 90px;
+    margin-top: 30px;
+    box-shadow: 1px 2px 6px #ddd;
+    border-radius: 7px;
+  }
+}
+@media (max-width: 768px){
+.content_box3 {
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 1px 2px 6px #ddd;
+    border-radius: 7px;
+  }
+}
+.title h1, .title p, .title h5 {
+    margin-bottom: 20px;
+}
+.title {
+    text-align: center;
+}
+article.art_c h3 {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+}
+article.art_c h4 {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+a {
+    color: #4a74b7;
+    text-decoration: none;
+}
+section.p_releases {
+    padding: 60px 0px;
+    background-color: #ffffff;
+}
+.mrg_left {
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+.s_box {
+    background-color: #ffffff;
+    padding: 12px;
+    box-shadow: 1px 2px 6px #ddd;
+}
+article.jhd p {
+    font-size: 14px;
+}
+a.page-link.tb_x {
+    padding: 20px 30px;
+    font-size: 1rem;
+    color: #000000;
+}
+.page-item.active .page-link {
+    z-index: 1;
+    color: #000;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+ul.content-list {
+    list-style: none;
+}
+ul.content-list li {
+    margin-bottom: 40px;
+}
+.content-list li:not(:last-child):before{
+    content: "";
+    position: absolute;
+    height: 65%;
+    left: 10px;
+    bottom: 0;
+    width: 2px;
+    background-color: #495662;
+    color: #495662;
+  }
+  span.timeline_bullet {
+    width: 30px;
+    height: 30px;
+    display: block;
+    border-radius: 50%;
+    border: 2px solid #495662;
+    background-color: #fff;
+    margin: 1px -moz-calc(1.25rem * 2) 0 0;
+    margin: 1px calc(1.25rem * 2) 0 0;
+    z-index: 1;
+    position: relative;
+    left: -60px;
+    top: 30px;
+}
+h2.count_q span {
+    font-size: 20px;
+}
+section.about_air {
+    background-color: #c2e9fa;
+    padding: 60px 0px;
+}

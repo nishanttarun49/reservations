@@ -1,0 +1,263 @@
+
+.section2 {
+    background-color: #005baa;
+    padding: 12px 1px;
+}
+.logo7 {
+    width: 8%;
+}
+/*=========//section3==========*/
+section.about1 {
+    background-color: #eef2f5;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+.we-re {
+    margin: 0 0 16px 0;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1.25;
+    color: #576673;
+}
+.f-sz {
+    letter-spacing: .25px;
+    line-height: 1.5;
+    font-weight: 100;
+    font-size: 15px;
+    color: #868585;
+}
+
+/*--------gallery-------*/
+.g-main {
+    position: relative;
+    width: 100%;
+    /*height: auto;*/
+    overflow: hidden;
+    height: -moz-calc(24rem + 10px);
+    height: calc(24rem + 10px);
+}
+.g-main2 {
+    position: relative;
+    width: 100%;
+    /*height: auto;*/
+    overflow: hidden;
+    height: -moz-calc(10rem + 10px);
+    height: calc(10rem + 10px);
+    margin-top: 8px;
+}
+.g-main3 {
+    position: relative;
+    width: 100%;
+    /*height: auto;*/
+    overflow: hidden;
+    height: -moz-calc(11.4rem + 10px);
+    height: calc(11.4rem + 10px);
+}
+.scale1 {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.g-main>a:hover .scale1 {
+    -ms-transform: scale(1.2); 
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); 
+}
+.g-main2>a:hover .scale1 {
+    -ms-transform: scale(1.2); 
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); 
+}
+.g-main3>a:hover .scale1 {
+    -ms-transform: scale(1.2); 
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2); 
+}
+/*.scale1:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5); 
+}*/
+@media (min-width: 768px){
+    .col-md-8.pd_5 {
+    padding-left: 4px;
+    padding-right: 4px;
+    }
+    .col-md-4.pd_5 {
+    padding-left: 4px;
+    padding-right: 4px;
+    }
+}
+.square {
+    border: 1px solid #ffffff;
+    position: absolute;
+    top: 45px;
+    width: 86%;
+    height: 78%;
+    left: 40px;
+    text-align: center;
+    padding: 50px;
+}
+.in-title {
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+    background-color: rgba(0,0,0,.1);
+    -webkit-backdrop-filter: blur(11px);
+    backdrop-filter: blur(11px);
+}
+.in-title2 {
+    height: 60%;
+    width: 70%;
+    padding: 20px;
+    background-color: rgba(0,0,0,.1);
+    -webkit-backdrop-filter: blur(11px);
+    backdrop-filter: blur(11px);
+    position: absolute;
+    top: 37px;
+    left: 48px;
+    text-align: center;
+    color: #ffffff;
+}
+.in-title3 {
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    position: absolute;
+    top: 00px;
+    color: #ffffff;
+    background-color: #00000024;
+}
+.g-main a {
+    color: #ffffff;
+}
+section.explore_the_world {
+    background-color: #f0fbff;
+    color: #495662;
+    padding: 40px;
+}
+.b_color {
+    color: #005baa;
+}
+/*--------exp-------*/
+section.explore {
+    padding: 30px 0px;
+}
+.exp-box img {
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+.exp-box h5, .exp-box p {
+    color: #eef2f5;
+}
+/*--------sec-video-------*/
+section.video {
+    background-image: url(../../../assets/images/video-bkg.jpg);
+    background-size: cover;
+    padding: 60px 0px;
+}
+/*--------sec-our-airlines-------*/
+section.our-airlines {
+    padding: 60px 0px;
+}
+img.airlines-logo {
+    margin-bottom: 30px;
+}
+/*===== col-5 End of media queries  ======*/
+.col-2dot4,
+.col-sm-2dot4,
+.col-md-2dot4,
+.col-lg-2dot4,
+.col-xl-2dot4 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.col-2dot4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+@media (min-width: 540px) {
+    .col-sm-2dot4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+@media (min-width: 720px) {
+    .col-md-2dot4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+@media (min-width: 960px) {
+    .col-lg-2dot4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+@media (min-width: 1140px) {
+    .col-xl-2dot4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+/*===== col-5 End of media queries  ======*/
+
+/*===== /parrtner-sec ======*/
+section.partner-sec {
+    background-image: url(../../../assets/images/logo2/partners-section.jpg);
+    background-size: 100%;
+    padding: 50px 0px;
+}
+h2.partner-title {
+    color: #f7f7f7;
+    opacity: .7;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+/*===== client_reviews ======*/
+section.client_reviews {
+    background-color: #f0fbff;
+    color: #495662;
+    padding: 40px;
+}
+p.rating1 i {
+    color: #ffd000;
+}
+/*===== book ======*/
+button.view-all {
+    background-color: #74b9ff;
+    color: #005baa;
+    width: 145px;
+    height: 40px;
+    border: none;
+    line-height: 1;
+    font-weight: 500;
+    font-size: 1rem;
+    padding-bottom: 2px;
+    margin-top: 30px;
+}
+button.view-all:hover {
+    background-color: #005baa;
+    color: #74b9ff;
+}

@@ -1,0 +1,80 @@
+body{
+    color: #495662;
+  font-family: 'Roboto', sans-serif;
+}
+.a_use_title {
+   color: #74b9ff;
+   font-weight: 400;
+   text-transform: uppercase;
+}
+.how_to_use_my_account {
+   background-color: #005baa;
+   padding: 60px 0px;
+}
+.body_content {
+   margin-bottom: 0;
+   color: #ffffff;
+   font-size: 19px;
+}
+.Why_use_use_my_account {
+   background-color: #f0fbff;
+   padding: 60px 0px;
+}
+.thin-text {
+   color: #005AAB;
+   font-weight: normal;
+   font-weight: 300;
+}
+
+.step_guide {
+   margin-bottom: 2em;
+   text-transform: uppercase;
+   font-family: 'Roboto', sans-serif;
+}
+.thin_title {
+   font-weight: 300;
+   color: #005aab;
+   margin-bottom: 20px;
+   font-size: 24px;
+}
+.artical_box p {
+   color: #005aab;
+   margin-bottom: 30px;
+   letter-spacing: 0.5px;
+   line-height: 1.8;
+}
+.how_to_create_account {
+   background-color: #74b9ff;
+   padding: 60px 0px 25px;
+}
+h5.with_fb {
+   color: #005AAB;
+   margin-bottom: 15px;
+   margin-top: 35px;
+}
+h2.how_to_log_in {
+   color: #005AAB;
+   font-weight: 600;
+   text-transform: uppercase;
+}
+.title_lightblue {
+   color: #74b9ff;
+   font-weight: 400;
+}
+.how_to_login {
+   padding: 60px 0px 40px;
+   background-color: #ffffff;
+}
+span.my_account {
+   color: #005AAB;
+   font-weight: 600;
+   text-transform: uppercase;
+}
+.how_to_login_ac {
+   background-color: #74b9ff;
+   padding: 60px 0px 40px;
+}
+.how_to_find {
+   color: #005aab;
+   font-weight: 300;
+}

@@ -1,0 +1,220 @@
+body{
+    color: #495662;
+  }
+/*-------top header--------*/
+.nice_c_u {
+    background-color: #005baa;
+    padding: 40px 0 30px;
+}
+.nice_title {
+    color: #fff;
+    font-weight: 300;
+    font-size: 24px;
+    letter-spacing: 1.2px;
+}
+h4.n_t_y span {
+    font-size: 16px;
+    color: #ffffff;
+    margin-right: 12px;
+}
+h4.n_t_y a {
+    color: #74b9ff;
+    font-size: 13px;
+    padding: 9px 12px;
+    margin-right: 10px;
+    border: 2px solid #74b9ff;
+    line-height: 4;
+    transition: 0.5s;
+}
+h4.n_t_y a:hover {
+  color: #ffffff;
+  background-color: #74b9ff;
+  text-decoration: none;
+}
+h4.n_t_y {
+    margin-bottom: 0;
+}
+.profile-image {
+    float: right;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 50px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.profile-image:hover .edit_profile_name {
+    position: absolute;
+    bottom: 0px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 6px;
+    font-size: 12px;
+    background-color: #0000006e;
+    color: #ffffff;
+}
+.upload_images {
+    max-width: 100%;
+    height: 100%;
+}
+/*------///top header--------*/
+
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #005baa;
+}
+.nav-pills a {
+    border-bottom: 1px solid #eeeeee;
+    transition: 0.5s;
+} 
+.nav-pills a:hover {
+    border-bottom: 1px solid #07c9da;
+} 
+.nav-pills {
+    font-size: 15px;
+    text-decoration: none;
+    color: #495662;
+}
+.dashboard_title {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    padding-bottom: 30px;
+    color: #005baa;
+}
+.card_a p {
+    font-size: 14px;
+}
+.flat_icons {
+    width: 60px;
+    margin-bottom: 2em;
+}
+.view_btn {
+    padding: 2px 15px;
+    font-size: 14px;
+    background: #2990e6;
+    color: #fff;
+    border: 2px solid #2990e6;
+    border-radius: 4px;
+}
+.card_a {
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.03), 0 2px 4px rgba(0,0,0,.09);
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 20px 5px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.card_a:hover {
+    background-color: #74b9ff;
+}
+.card_a:hover .view_btn {
+  background-color: #ffffff;
+  color: #495662;
+}
+.flights {
+    background: url(../../../assets/images/dashboard/backpacker.jpg) no-repeat;
+    background-size: cover;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 200px;
+    text-align: center;
+    text-align: -webkit-center;
+}
+.title_h2 {
+    color: #fff;
+    text-shadow: #333 1px 1px;
+    padding-top: 20px;
+    font-weight: 600;
+}
+.title_p {
+    color: #fff;
+    text-shadow: #333 1px 1px;
+    font-size: 18px;
+}
+.search_flights {
+    background-color: #fff;
+    border: 2px solid #fff;
+    padding: 3px 20px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #0b55b1;
+}
+.search_flights:hover {
+    background-color: #0b55b1;
+    color: #ffffff;
+}
+.dashboard_section {
+    background-color: #ffffff;
+    padding: 60px 0px;
+    border-top: 1px solid #eee;
+}
+.travellers {
+    background: url(../../../assets/images/dashboard/beach-family.jpg) no-repeat;
+    background-size: cover;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 200px;
+    text-align: center;
+    text-align: -webkit-center;
+    background-position: center;
+}
+.add_traveller {
+  color: #fff;
+  background-color: #005baa;
+  padding: 15px 15px;
+  margin-top: 10px;
+}
+.left_box {
+    float: left;
+    font-size: 14px;
+    letter-spacing: 1.1px;
+}
+.right_box {
+    float: right;
+    font-size: 13px;
+    font-weight: 600;
+    padding-top: 15px;
+}
+.right_box a {
+      color: #005baa;
+}
+.profile_editor {
+    display: table;
+    width: 100%;
+    padding: 20px 20px;
+    background-color: #eee;
+    height: auto;
+    margin-bottom: 10px;
+}
+.n_ame {
+    margin-bottom: 14px;
+}
+.planning_trip {
+    padding: 10px 10px 15px;
+    border: 1px solid #eee;
+    text-align: center;
+}
+.planning_trip p {
+    font-size: 13px;
+    margin-top: 5px;
+    color: #005ba9;
+}
+.transparent-bg {
+    width: 100%;
+    padding: 3px;
+    font-size: 13px;
+    background-color: #fff;
+    border: 2px solid #005ba9;
+}
+.transparent-bg:hover {
+    color: #ffffff;
+    background-color: #005ba9;
+    border: 2px solid #005ba9;
+}

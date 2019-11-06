@@ -1,0 +1,140 @@
+@media (min-width: 1200px){
+    .container {
+      max-width: 1140px;
+      }
+    }
+    .title_section {
+    background-color: #005baa;
+    padding: 40px 1px;
+    }
+    section.we_ticket {
+      background-image: url(../../../assets/images/feature/ticket-bg.jpg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: bottom;
+      background-color: #e7e7e7;
+      padding: 50px 0px;
+    }
+    section.c_which {
+      background-color: #e2e7fc;
+      padding: 50px 0px;
+    }
+    .create_acc{
+      background-image: url(../../../assets/images/sign-up.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #f6f6f6;
+      padding: 70px 0px;
+      height: auto;
+      background-position: center;
+    }
+    .payment-method{
+      background-image: url(../../../assets/images/payment-methods.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #f6f6f6;
+      padding: 70px 0px;
+      height: auto;
+      background-position: center;
+    }
+    .card.pd-5 {
+      padding: 30px 30px;
+    }
+    a.btn.btn-xsm.gsp2 {
+      border: 2px solid #ccc;
+    }
+    .payment_log {
+      width: 115px;
+    }
+    a.nav-link.t-fz {
+      background-color: #388ebf !important;
+      line-height: 1.5;
+      margin-bottom: 10px;
+      font-size: 14px;
+      padding: 8px 15px;
+      color: #fff;
+    }
+    section.faq {
+      background-color: #e2e7fc;
+      padding: 70px 0px;
+    }
+    .faq-box {
+        position: relative;
+        background-color: #ffffff;
+        padding: 15px;
+        font-size: 13px;
+        border-radius: 4px;
+    }
+    @media (min-width: 768px){
+      .col-4.t-pd {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+    /*-------customer services-------*/
+    #owl-demo .item{
+      background: #ffffff;
+      padding: 30px 30px;
+      margin: 10px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      text-align: center;
+      font-size: 14px;
+    }
+    .customNavigation{
+      text-align: center;
+    }
+    .customNavigation a{
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+    a.btn.next {
+      position: absolute;
+      right: -25px;
+      bottom: 12em;
+    }
+    a.btn.prev {
+        position: absolute;
+        left: -25px;
+        bottom: 12em;
+    }
+    section.customer_s {
+        background-color: #f0f3fe;
+        padding: 50px 0px;
+    }
+    .tab_customer {
+        margin-bottom: 15px;
+        border-radius: 50px;
+    }
+    section.contact {
+        background-color: #ffffff;
+        padding: 60px 0px;
+    }
+    .feature-column {
+        font-size: 15px;
+        font-weight: 200;
+        padding: 5px 40px;
+        /* box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.15); */
+        width: 100%;
+        position: relative;
+    }
+    .feature-column .icon {
+        border-radius: 50%;
+        height: 60px;
+        margin: 0 auto;
+        width: 60px;
+        margin-bottom: 30px;
+    }
+    .feature-column {
+        font-size: 15px;
+        font-weight: 200;
+        padding: 5px 40px;
+        /* box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.15); */
+        width: 100%;
+        position: relative;
+    }

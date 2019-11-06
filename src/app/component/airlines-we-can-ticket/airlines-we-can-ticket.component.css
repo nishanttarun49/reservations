@@ -1,0 +1,60 @@
+section.airlines {
+    padding: 50px 0px;
+    background-color: #005baa;
+  }
+  p.p-content {
+      color: #fff;
+      text-align: center;
+      margin-top: 20px;
+  }
+  .a_2_z a {
+      display: block;
+      text-align: center;
+      height: 25px;
+      width: 25px;
+      background-color: #f0fbff;
+      padding: 3px;
+      margin: 1px;
+      line-height: 1.5rem;
+      color: #005baa;
+      float: left;
+      text-decoration: none;
+      font-size: 1rem;
+  }
+  .a_2_z a:hover {
+    background-color: #005baa;
+    color: #ffffff;
+  }
+  section.airlines2 {
+      padding: 20px 0;
+  }
+  .f_tk a {
+      color: #329cda;
+      font-size: 15px;
+  }
+  .f_tk a:hover {
+      opacity: 0.5;
+  }
+  p.az1 {
+      margin-top: 10px;
+      color: #005baa;
+      font-size: 1.5rem;
+      line-height: 2rem;
+  }
+  .f_tk {
+    max-height: 130px;
+    width: auto;
+    border: 1px solid #f7f7f754;
+    padding-bottom: 10px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  span.home_path {
+    font-size: 13px;
+    color: #339bc3;
+}
+.path1 {
+    background-color: #97defa;
+    border-bottom: none;
+    padding: 5px 0px;
+}

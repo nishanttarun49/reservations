@@ -1,0 +1,39 @@
+body{
+    color: #495662;
+}
+small.contact_a.mb-0 {
+color: #4badd4;
+}
+.path_home {
+background-color: #97defa;
+padding: 3px 0px;
+}
+small.contact_a {
+color: #4badd4;
+}
+small.contact_a a {
+color: #4badd4;
+}
+section.privacy_sec {
+background-color: #f0fbff;
+padding: 60px 0px;
+}
+h2.content-sub-heading {
+font-weight: 600;
+color: #005baa;
+padding-bottom: 10px;
+font-size: 17px;
+text-transform: uppercase;
+}
+ul.l_sq {
+list-style: square;
+padding-left: 15px;
+}
+a.u_link {
+color: #2a92ea;
+text-decoration: underline;
+}
+.content-wrap_a p {
+letter-spacing: 1px;
+font-size: 15px;
+}

@@ -1,0 +1,28 @@
+body{
+    color: #495662;
+}
+small.contact_a.mb-0 {
+color: #4badd4;
+}
+.path_home {
+background-color: #97defa;
+padding: 3px 0px;
+}
+small.contact_a {
+color: #4badd4;
+}
+small.contact_a a {
+color: #4badd4;
+}
+section.terms_sitemap {
+background-color: #f0fbff;
+padding: 60px 0px;
+}
+a.u_link {
+color: #2a92ea;
+text-decoration: underline;
+}
+.content-sitemap p {
+letter-spacing: 1px;
+font-size: 15px;
+}

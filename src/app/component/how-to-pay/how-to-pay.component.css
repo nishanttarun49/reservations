@@ -1,0 +1,36 @@
+.book_flight {
+    background-color: #005baa;
+    padding: 50px 0px;
+}
+h1.text-bold.pay-way {
+    color: #74b3ec;
+    text-align: center;
+    margin-top: 20px;
+}
+.on_color {
+    color: #005baa;
+}
+section.click_on {
+    padding: 50px 0px;
+    background-color: #ffffff;
+}
+.item-logo {
+    margin-bottom: 30px;
+}
+.pay-content {
+    text-align: center;
+    padding: 80px 0px;
+    margin-bottom: 30px;
+}
+img.pay_l {
+    margin-bottom: 40px;
+}
+p.pay_ctn {
+    color: #005aab;
+}
+a {
+    color: #1d8bef;
+}
+h2.l_blue {
+    color: #67baf5;
+}

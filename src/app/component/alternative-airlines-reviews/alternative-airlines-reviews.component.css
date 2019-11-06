@@ -1,0 +1,57 @@
+span.wt_say {
+    color: #005aab;
+    font-weight: 400;
+}
+span.a_airlines {
+    color: #6dcff6;
+    font-weight: 600;
+}
+.alt_review {
+    text-align: center;
+}
+section.review1 {
+    padding: 50px 0px;
+}
+h1.a_few_word {
+    font-size: 25px;
+    font-weight: 200;
+}
+h2.a_few_word {
+    color: #005aab;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-weight: 400;
+    text-align: center;
+    font-size: 30px;
+}
+span.sub_tl {
+    color: #6dcff6;
+    font-weight: 600;
+}
+section.a_airlines2 {
+    background-color: #f0fbff;
+    padding: 50px 0px;
+}
+.f_star {
+    color: #f0db68;
+    font-size: 24px;
+}
+h3.quote {
+    color: #005aab;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.7rem;
+}
+.smallerp {
+    font-size: 1rem;
+    line-height: 1.7rem;
+}
+.greytext {
+    color: #495662;
+}
+.review_box {
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: 60px;
+}

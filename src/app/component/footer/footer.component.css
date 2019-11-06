@@ -1,0 +1,40 @@
+.footer-sec {
+    background-color: #f5f6f8;
+    padding: 80px 0px 20px;
+}
+.footer-title {
+    color: #005baa;
+}
+ul.foote-list {
+    padding-left: 0;
+    list-style: none;
+    margin-top: 15px;
+}
+ul.foote-list li a {
+    color: #023663;
+    font-size: 14px;
+    line-height: 1.88;
+}
+p.social-media i {
+    color: #ffffff;
+    background-color: #005baa;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 24px;
+}
+.f-btm {
+    padding: 13px 15px;
+    background-color: #005baa;
+    color: #fff;
+    font-size: 11px;
+    text-align: center;
+}
+.f-btm {
+    padding: 13px 15px;
+    background-color: #005baa;
+    color: #fff;
+    font-size: 11px;
+    text-align: center;
+}

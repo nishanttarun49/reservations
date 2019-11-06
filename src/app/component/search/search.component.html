@@ -1,0 +1,556 @@
+<div class="main-wrapper" *ngIf="!signTab" style="background-image: url('../../../assets/images/head-bg.jpg');">
+  <!-- <div class="overlay1"></div> -->
+    <!-- content-wrapper -->
+    <div class="content-wrapper position-absolute d-flex justify-content-center align-items-center">
+      <div class="container">
+        <div class="row">
+           <div class="col-md-12">
+              <h3 class="heading">Search & Buy Avianca Flights</h3>
+           </div>
+           <div class="col-md-12">
+              <div class="bd-example bd-example-tabs">
+                <ul class="nav nav-pills mb-2" id="pills-tab" role="tablist">
+                  <li class="nav-item">
+                    <label class="ck_box">Return
+                      <input name="new" type="checkbox" (change)="setSearchType('return')" [checked]="searchType=='return'">
+                      <span class="checkmark"></span>
+                    </label>
+                    <a class="nav-link nav-sz act2 active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true" style="padding-left: 0;"><!-- Return --></a>
+                  </li>
+                  <li class="nav-item">
+                    <label class="ck_box">One way
+                      <input name="new" (change)="setSearchType('oneway')" [checked]="searchType=='oneway'" type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                    <a class="nav-link nav-sz" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false"><!-- One way --></a>
+                  </li>
+                  <li class="nav-item">
+                    <label class="ck_box">Multi-city
+                      <input name="new"  type="checkbox" (change)="setSearchType('multi-city')" [checked]="searchType=='multi-city'">
+                      <span class="checkmark"></span>
+                    </label>
+                    <a class="nav-link nav-sz" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Multi-city</a>
+                  </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" *ngIf="searchType=='return'">
+                       <div class="d-flex justify-content-between position-relative">
+                          <div class="f-item" style="flex-shrink: 0; width: 230px;">
+                             <label class="label2">From </label>
+                             <mat-form-field class="example-full-width">
+                                <input type="text" class="form-control custom-fm" (keyup)="getAirport('origin')" placeholder="Country, City, Airport" aria-label="Origin" matInput [(ngModel)]="searchModel.origin" [formControl]="myControl" [matAutocomplete]="auto">
+                                <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                                   <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                                      {{option.text}}
+                                   </mat-option>
+                                </mat-autocomplete>
+                             </mat-form-field>
+                          </div>
+                          <div class="f-item" style="flex-shrink: 0; width: 230px;">
+                             <label class="label2">To</label>
+                             <mat-form-field class="example-full-width">
+                                <input type="text" class="form-control custom-fm" (keyup)="getAirport('destination')" placeholder="Country, City, Airport" aria-label="Destination" matInput [(ngModel)]="searchModel.destination" [formControl]="myControl2" [matAutocomplete]="auto2">
+                                <mat-autocomplete  #auto2="matAutocomplete" [displayWith]="displayFn2">
+                                   <mat-option *ngFor="let option2 of filteredOptions2 | async" [value]="option2">
+                                      {{option2.text}}
+                                   </mat-option>
+                                </mat-autocomplete>
+                             </mat-form-field>
+                          </div>
+                          <div class="f-item" >
+                             <label class="label2">From</label>
+                             
+                             <input type="text" class="form-control custom-fm" (click)="openDateRange()" [(ngModel)]="selected.startDate" aria-label="Text" placeholder="country, city or airport" >
+                             
+                          </div>
+                          <div class="f-item" style="flex-grow: 1">
+                             <label class="label2">To</label>
+                             <input type="text" class="form-control custom-fm"  (click)="openDateRange()" [(ngModel)]="selected.endDate" aria-label="Text" placeholder="country, city or airport" >
+                          </div>
+                          <div class="f-item" style="flex-shrink: 0; width: 230px;">
+                             <label class="label2">Travellers & Cabin Class</label>
+                             <input type="text" class="form-control custom-fm" aria-label="Text" (click)="showClassPopup()" placeholder="country, city or airport" >
+                          </div>
+                       </div>
+                       <div class="row">
+                             <input type="text" id="date-range" 
+                             class="form-control" ngxDaterangepickerMd  [(ngModel)]="selected" style="display:none;" >
+                       </div>
+                       <a href="#" class="flight-search" name="submit">Search flights <img src="assets/images/flight2.png"></a>
+                  </div><!--/tabs1-->
+                  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" *ngIf="searchType=='oneway'">
+                    <div class="d-flex justify-content-between position-relative">
+                      <div class="f-item" style="flex-shrink: 0; width: 230px;">
+                        <label class="label2">From </label>
+                        <mat-form-field class="example-full-width">
+                          <input type="text" class="form-control custom-fm" (keyup)="getAirport('origin')" placeholder="Country, City, Airport" aria-label="Origin" matInput [(ngModel)]="searchModel.origin" [formControl]="myControl" [matAutocomplete]="auto">
+                          <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                              {{option.text}}
+                            </mat-option>
+                          </mat-autocomplete>
+                        </mat-form-field>
+                      </div>
+                      <div class="f-item" style="flex-shrink: 0; width: 230px;">
+                        <label class="label2">To</label>
+                        <mat-form-field class="example-full-width">
+                          <input type="text" class="form-control custom-fm" (keyup)="getAirport('destination')" placeholder="Country, City, Airport" aria-label="Destination" matInput [(ngModel)]="searchModel.destination" [formControl]="myControl2" [matAutocomplete]="auto2">
+                          <mat-autocomplete  #auto2="matAutocomplete" [displayWith]="displayFn2">
+                            <mat-option *ngFor="let option2 of filteredOptions2 | async" [value]="option2">
+                              {{option2.text}}
+                            </mat-option>
+                          </mat-autocomplete>
+                        </mat-form-field>
+                      </div>
+                      <div class="f-item" >
+                        <label class="label2">From</label>
+                        <input type="text" class="form-control custom-fm" (click)="openDateRange()" [(ngModel)]="selected.startDate" aria-label="Text" placeholder="country, city or airport" >
+                      </div>
+                      <div class="f-item" style="flex-grow: 1">
+                        <label class="label2">To</label>
+                        <input type="text" class="form-control custom-fm" disabled aria-label="Text" placeholder="(one-way)" >
+                      </div>
+                      <div class="f-item" style="flex-shrink: 0; width: 230px;">
+                        <label class="label2">Travellers & Cabin Class</label>
+                        <input type="text" class="form-control custom-fm" aria-label="Text" (click)="showClassPopup()" placeholder="country, city or airport" >
+                      </div>
+                    </div>
+                    <div class="row">
+                      <input type="text" id="date-range" class="form-control" ngxDaterangepickerMd [singleDatePicker]="true" [(ngModel)]="selected" style="display:none;" >
+                    </div>
+                    <a href="#" class="flight-search" name="submit">Search flights <img src="assets/images/flight2.png"></a>
+                  </div><!--/tabs2-->
+                  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" *ngIf="searchType=='multi-city'">
+                    <div class="d-flex justify-content-between position-relative">
+                      <form [formGroup]="demoForm">
+                        <div formArrayName="demoArray" *ngFor="let arrayItem of arrayItems; let i=index">
+                          <div class="f-item" style="flex-shrink: 0; width: 230px;">
+                            <label class="label2">From </label>
+                            <mat-form-field class="example-full-width">
+                              <input type="text" class="form-control custom-fm" (keyup)="getAirport('origin',i)" placeholder="Country, City, Airport" aria-label="Origin" matInput [(ngModel)]="searchModel.origin[i]" [formControl]="myControl[i]" [matAutocomplete]="auto">
+                              <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn(i)">
+                                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                                  {{option.text}}
+                                </mat-option>
+                              </mat-autocomplete>
+                            </mat-form-field>
+                          </div>
+                          <div class="f-item" style="flex-shrink: 0; width: 230px;">
+                            <label class="label2">To</label>
+                            <mat-form-field class="example-full-width">
+                              <input type="text" class="form-control custom-fm" (keyup)="getAirport('destination',i)" placeholder="Country, City, Airport" aria-label="Destination" matInput [(ngModel)]="searchModel.destination[i]" [formControl]="myControl2[i]" [matAutocomplete]="auto2">
+                              <mat-autocomplete  #auto2="matAutocomplete" [displayWith]="displayFn2(i)">
+                                <mat-option *ngFor="let option2 of filteredOptions2 | async" [value]="option2">
+                                  {{option2.text}}
+                                </mat-option>
+                              </mat-autocomplete>
+                            </mat-form-field>
+                          </div>
+                          <input [id]="arrayItem.id" type="checkbox" [formControl]="demoArray[i]">
+                          <label [for]="arrayItem.id" class="array-item-title">{{arrayItem.title}}</label>
+                        </div>
+                        <div class="f-item" >
+                          <label class="label2">From</label>     
+                          <input type="text" class="form-control custom-fm" (click)="openDateRange()" [(ngModel)]="selected[i].startDate" aria-label="Text" placeholder="country, city or airport" >
+                        </div>  
+                      </form>
+
+                      <button (click)="addCity()">+</button>
+
+                      <div class="f-item" style="flex-shrink: 0; width: 230px;">
+                        <label class="label2">Travellers & Cabin Class</label>
+                        <input type="text" class="form-control custom-fm" aria-label="Text" (click)="showClassPopup()" placeholder="country, city or airport" >
+                      </div>
+                    </div>
+                    <div class="row">
+                      <input type="text" id="date-range" [singleDatePicker]="true" class="form-control" ngxDaterangepickerMd  [(ngModel)]="selected" style="display:none;" >
+                    </div>
+                    <a href="#" class="flight-search" name="submit">Search flights <img src="assets/images/flight2.png"></a>
+                  </div><!--/tabs3-->
+                  <!-- <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                       <p>Ad pariatur nostrud pariatur exercitation ipsum ipsum culpa mollit commodo mollit ex.</p>
+                    </div> -->
+                    <!--/tabs2-->                                                                                                                                                                              
+                   <!--  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                       <p>Est quis nulla laborum officia ad nisi ex nostrud culpa Lorem excepteur aliquip dolor aliqua irure ex. Nulla ut duis ipsum nisi elit fugiat commodo sunt reprehenderit laborum veniam eu veniam.</p>
+                    </div> -->
+                    <!--/tabs3-->
+                </div>
+              </div>
+            </div>
+           
+        </div>
+      </div>
+     </div>
+     <!-- content-wrapper -->
+
+     <!-- search-wrapper -->
+     <div class="search-wrapper">
+        <div class="container">
+           <div class="row">
+              <div class="col-12">
+                 <form action="#">
+                    <div class="input-group">
+                       <div class="input-group-prepend">
+                          <span class="input-group-text pl-0"><i class="fa fa-search"></i></span>
+                       </div>
+                       <input type="text" class="form-control" placeholder="Username">
+                       <span id="search-close"><i class="fa fa-close"></i></span>
+                    </div>
+                 </form>
+              </div>
+           </div>
+        </div>
+     </div>
+     <!-- search-wrapper -->
+
+     <!-- mobile menu -->
+     <div class="mega-offcanvas">
+        <span class="off-canvas-close"><i class="fa fa-close"></i></span>
+        <ul class="list-unstyled">
+           <li><a href="#">Home</a></li>
+           <li><a href="#">About us</a></li>
+           <li><a href="#">Contact Us</a></li>
+           <li><a href="#">Login</a></li>
+           <li><a href="#">Registration</a></li>
+        </ul>
+     </div>
+     <!-- //mobile menu -->
+  </div>
+  <!-- main-wrapper -->
+
+<section class="header_search">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <ul class="details1">
+            <li><a href="#"><div class="up_t">From</div> <div class="dn_t">New Delhi</div></a></li>
+            <li><a href="#"><div class="up_t">To</div> <div class="dn_t">Barcelona</div></a></li>
+            <li style="border-left: 1px solid #fff;"><a href="#"><div class="up_t">Departure</div> <div class="dn_t">Mon 21 Oct</div></a></li>
+            <li style="border-left: 1px solid #fff;"><a href="#"><div class="up_t">Return</div> <div class="dn_t">Wed 23 Oct</div></a></li>
+            <li style="border-left: 1px solid #fff;"><a href="#"><div class="up_t">Passengers</div> <div class="dn_t">1 adult</div></a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <button class="s_change">Change search</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="search_sec">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card">
+            <div class="title_head"><img width="24" height="26" alt="result-number" src="assets/images/results-plane.svg"> 96 results found.</div>
+              <div class="card-body t_border">
+                <p><strong>Cheapest time to fly?</strong></p>
+               <p><small>Click to view and compare prices</small></p>
+                <button type="button" class="btn btn-primary">Save 21,415</button>
+              </div>
+              <div class="card-body t_border">
+                <p><strong>Sort By</strong></p>
+                <select class="form-control" id="sort_by">
+                  <option>Lowest Price</option>
+                  <option>Fastest Journey Time</option>
+                </select>
+              </div>
+              <div class="card-body t_border">
+                <p><strong>Sort By</strong></p>
+                <select class="form-control" id="sort_by">
+                  <option>Lowest Price</option>
+                  <option>Fastest Journey Time</option>
+                </select>
+              </div>
+              <div class="card-body t_border">
+                <p><strong>Airlines</strong></p>
+                <label class="ck_box">
+                  <input type="checkbox" value="xy"> SpiceJet
+                  <span class="checkmark"></span>
+                </label>
+                <label class="ck_box">
+                  <input type="checkbox" value="xy"> Vistara
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div><!--/card-->
+          </div><!--/col-md-3-->
+  
+          <div class="col-md-9">
+            <div class="s_head">
+  
+              <div class="title_search">
+                <div class="row">
+                  <div class="col col-md-3">
+                    <p class="f_tl_aa">From</p>
+                    <span class="f_price">15,758
+                    <span class="ext1">.87 <i class="fa fa-inr"></i></span></span>
+                  </div>
+                  <div class="col col-md-3">
+                    <span class="per_p">Per passenger <br> <a href="#" class="bkd"><b>Price breakdown</b><i class="fa fa-chevron-down"></i></a></span>
+                  </div>
+                </div>
+              </div><!--/title_searchs-->
+  
+              <div class="result-segment">
+                <span>
+                <img class="legs" src="assets/images/departure-plane.svg">
+                </span>Departure on Sun 20 Oct '19
+              </div><!--/result-segment-->
+  
+              <div class="search_row">
+                <div class="row">
+                  <div class="col-md-1 dn">
+                      <label class="ck_box">
+                        <input type="checkbox" value="xy">
+                        <span class="checkmark"></span>
+                      </label>
+                   </div>
+                  <div class="col-3 col-md-2">
+                    <img src="assets/images/vistara.png" class="crnt_logo">
+                    <div class="clg_name">Vistara</div>
+                  </div>
+                  <div class="col-3 col-md-3">
+                    <div class="f_times-in">
+                      6:55am<span>New Delhi (DEL)</span>
+                    </div>
+                  </div>
+                  <div class="col-3 col-md-2">
+                    <div class="f_times-out">
+                      6:55am<span>New Delhi (DEL)</span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 dn">
+                    <div class="f_details">
+                      <img src="assets/images/plane-up.svg"> Vistara <a href="#">Eco Standard</a>
+                    </div>
+                    <div class="f_details">
+                      <img src="assets/images/time.svg"> 02h 00m → Direct
+                    </div>
+                    <div class="f_details">
+                      <img src="assets/images/baggage.svg"><a href="#"> Luggage information</a>
+                    </div>
+                    <div class="f_details">
+                      <img src="assets/images/info-black.svg"><a href="#"> Is this fare refundable?</a>
+                    </div>
+                  </div>
+                  <div class="col-3 col-md-1">
+                    <div class="f_info1">
+                      <u>Details</u><br>
+                      <img src="assets/images/info-blue.svg">
+                    </div>
+                  </div>
+                  <div class="col-12 mobile_details_1">
+                      <div class="flight-info-mobile">
+                          <span class="stop_1">
+                              1 Stop
+                          </span>
+                          <span class="time_1">
+                              | 14h 10m |
+                          </span>
+                          <span class="bags_1">
+                              2 items of check-in baggage (20 kg x 2)
+                          </span>
+                      </div>
+                  </div>
+                </div><!--/row-->
+              </div>
+              <!--/search_row-->
+  
+              <div class="result-segment">
+                <span>
+                <img class="legs" src="assets/images/return-plane.svg">
+                </span>Return on Fri 8 Nov '19
+              </div><!--/result-segment-->
+  
+  
+  
+  
+              <div class="search_row">
+                 <div class="row">
+                  <div class="col-md-1 dn">
+                      <label class="ck_box">
+                        <input type="checkbox" value="xy">
+                        <span class="checkmark"></span>
+                      </label>
+                   </div>
+                  <div class="col-3 col-md-2">
+                    <img src="assets/images/vistara.png" class="crnt_logo">
+                    <div class="clg_name">Vistara</div>
+                  </div>
+                  <div class="col-3 col-md-3">
+                    <div class="f_times-in">
+                      6:55am<span>New Delhi (DEL)</span>
+                    </div>
+                  </div>
+                  <div class="col-3 col-md-2">
+                    <div class="f_times-out">
+                      6:55am<span>New Delhi (DEL)</span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 dn">
+                    <div class="f_details">
+                      <img src="assets/images/plane-up.svg"> Vistara <a href="#">Eco Standard</a>
+                    </div>
+                    <div class="f_details">
+                      <img src="assets/images/time.svg"> 02h 00m → Direct
+                    </div>
+                    <div class="f_details">
+                      <img src="assets/images/baggage.svg"><a href="#"> Luggage information</a>
+                    </div>
+                    <div class="f_details">
+                      <img src="assets/images/info-black.svg"><a href="#"> Is this fare refundable?</a>
+                    </div>
+                  </div>
+                  <div class="col-3 col-md-1">
+                    <div class="f_info1">
+                      <u>Details</u><br>
+                      <img src="assets/images/info-blue.svg">
+                    </div>
+                  </div>
+                  <div class="col-12 mobile_details_1">
+                      <div class="flight-info-mobile">
+                          <span class="stop_1">
+                              1 Stop
+                          </span>
+                          <span class="time_1">
+                              | 14h 10m |
+                          </span>
+                          <span class="bags_1">
+                              2 items of check-in baggage (20 kg x 2)
+                          </span>
+                      </div>
+                  </div>
+                </div><!--/row-->
+              </div>
+              <!--/search_row-->
+  
+              <div class="search_row">
+                 <div class="row">
+                  <div class="col-md-1 dn">
+                      <label class="ck_box">
+                        <input type="checkbox" value="xy">
+                        <span class="checkmark"></span>
+                      </label>
+                   </div>
+                  <div class="col-3 col-md-2">
+                    <img src="assets/images/vistara.png" class="crnt_logo">
+                    <div class="clg_name">Vistara</div>
+                  </div>
+                  <div class="col-3 col-md-3">
+                    <div class="f_times-in">
+                      6:55am<span>New Delhi (DEL)</span>
+                    </div>
+                  </div>
+                  <div class="col-3 col-md-2">
+                    <div class="f_times-out">
+                      6:55am<span>New Delhi (DEL)</span>
+                    </div>
+                  </div>
+                  <div class="col-md-3 dn">
+                    <div class="f_details">
+                      <img src="assets/images/plane-up.svg"> Vistara <a href="#">Eco Standard</a>
+                    </div>
+                    <div class="f_details">
+                      <img src="assets/images/time.svg"> 02h 00m → Direct
+                    </div>
+                    <div class="f_details">
+                      <img src="assets/images/baggage.svg"><a href="#"> Luggage information</a>
+                    </div>
+                    <div class="f_details">
+                      <img src="assets/images/info-black.svg"><a href="#"> Is this fare refundable?</a>
+                    </div>
+                  </div>
+                  <div class="col-3 col-md-1">
+                    <div class="f_info1">
+                      <u>Details</u><br>
+                      <img src="assets/images/info-blue.svg">
+                    </div>
+                  </div>
+                  <div class="col-12 mobile_details_1">
+                      <div class="flight-info-mobile">
+                          <span class="stop_1">
+                              1 Stop
+                          </span>
+                          <span class="time_1">
+                              | 14h 10m |
+                          </span>
+                          <span class="bags_1">
+                              2 items of check-in baggage (20 kg x 2)
+                          </span>
+                      </div>
+                  </div>
+                </div><!--/row-->
+              </div>
+              <!--/search_row-->
+  
+              <div class="search_row">
+                 <div class="row">
+                      <div class="col-md-1 dn">
+                          <label class="ck_box">
+                            <input type="checkbox" value="xy">
+                            <span class="checkmark"></span>
+                          </label>
+                       </div>
+                      <div class="col-3 col-md-2">
+                        <img src="assets/images/vistara.png" class="crnt_logo">
+                        <div class="clg_name">Vistara</div>
+                      </div>
+                      <div class="col-3 col-md-3">
+                        <div class="f_times-in">
+                          6:55am<span>New Delhi (DEL)</span>
+                        </div>
+                      </div>
+                      <div class="col-3 col-md-2">
+                        <div class="f_times-out">
+                          6:55am<span>New Delhi (DEL)</span>
+                        </div>
+                      </div>
+                      <div class="col-md-3 dn">
+                        <div class="f_details">
+                          <img src="assets/images/plane-up.svg"> Vistara <a href="#">Eco Standard</a>
+                        </div>
+                        <div class="f_details">
+                          <img src="assets/images/time.svg"> 02h 00m → Direct
+                        </div>
+                        <div class="f_details">
+                          <img src="assets/images/baggage.svg"><a href="#"> Luggage information</a>
+                        </div>
+                        <div class="f_details">
+                          <img src="assets/images/info-black.svg"><a href="#"> Is this fare refundable?</a>
+                        </div>
+                      </div>
+                      <div class="col-3 col-md-1">
+                        <div class="f_info1">
+                          <u>Details</u><br>
+                          <img src="assets/images/info-blue.svg">
+                        </div>
+                      </div>
+                      <div class="col-12 mobile_details_1">
+                          <div class="flight-info-mobile">
+                              <span class="stop_1">
+                                  1 Stop
+                              </span>
+                              <span class="time_1">
+                                  | 14h 10m |
+                              </span>
+                              <span class="bags_1">
+                                  2 items of check-in baggage (20 kg x 2)
+                              </span>
+                          </div>
+                      </div>
+                  </div><!--/row-->
+              </div>
+              <!--/search_row-->
+  
+              <div class="result-footer">
+                  <button class="ff-pay-button btn btn-secondary">Confirm Selection <img src="assets/images/flight2.png" width="20px"></button>
+              </div>
+             
+  
+            </div><!--/s_head-->
+          </div><!--/col-md-9-->
+        </div><!--/row-->
+      </div><!--/container-->
+    </section>

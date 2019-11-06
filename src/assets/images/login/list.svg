@@ -1,0 +1,45 @@
+<svg id="Group_4771" data-name="Group 4771" xmlns="http://www.w3.org/2000/svg" width="48.32" height="29.521" viewBox="0 0 48.32 29.521">
+  <g id="Group_4725" data-name="Group 4725">
+    <g id="Group_4723" data-name="Group 4723" transform="translate(0.394 0.788)">
+      <rect id="Rectangle_2956" data-name="Rectangle 2956" width="47.462" height="27.945" rx="1.631" fill="#fff"/>
+    </g>
+    <g id="Group_4724" data-name="Group 4724">
+      <path id="Path_3650" data-name="Path 3650" d="M2446.264,1412.591h-43.878a2.223,2.223,0,0,0-2.221,2.221v25.079a2.224,2.224,0,0,0,2.221,2.221h43.878a2.224,2.224,0,0,0,2.221-2.221v-25.079A2.223,2.223,0,0,0,2446.264,1412.591Zm1.433,27.3a1.434,1.434,0,0,1-1.433,1.433h-43.878a1.433,1.433,0,0,1-1.433-1.433v-25.079a1.434,1.434,0,0,1,1.433-1.433h43.878a1.434,1.434,0,0,1,1.433,1.433Z" transform="translate(-2400.165 -1412.591)" fill="#dcdcdc"/>
+    </g>
+  </g>
+  <g id="Group_4727" data-name="Group 4727" transform="translate(0.394 0.394)">
+    <g id="Group_4726" data-name="Group 4726">
+      <path id="Path_3651" data-name="Path 3651" d="M2400.613,1416.294c0-1.8,0-3.255,3.255-3.255h41.022c3.9,0,3.255,1.457,3.255,3.255" transform="translate(-2400.613 -1413.039)" fill="#dcdcdc"/>
+    </g>
+  </g>
+  <g id="Group_4729" data-name="Group 4729" transform="translate(1.494 1.195)">
+    <g id="Group_4728" data-name="Group 4728">
+      <circle id="Ellipse_386" data-name="Ellipse 386" cx="0.611" cy="0.611" r="0.611" fill="#d47780"/>
+    </g>
+  </g>
+  <g id="Group_4731" data-name="Group 4731" transform="translate(3.326 1.195)">
+    <g id="Group_4730" data-name="Group 4730">
+      <circle id="Ellipse_387" data-name="Ellipse 387" cx="0.611" cy="0.611" r="0.611" fill="#fff"/>
+    </g>
+  </g>
+  <g id="Group_4733" data-name="Group 4733" transform="translate(5.315 1.195)">
+    <g id="Group_4732" data-name="Group 4732">
+      <circle id="Ellipse_388" data-name="Ellipse 388" cx="0.611" cy="0.611" r="0.611" fill="#fff"/>
+    </g>
+  </g>
+  <g id="Group_4735" data-name="Group 4735" transform="translate(6.219 21.372)">
+    <g id="Group_4734" data-name="Group 4734">
+      <rect id="Rectangle_2957" data-name="Rectangle 2957" width="3.234" height="36.67" rx="1.617" transform="translate(0 3.234) rotate(-90)" fill="#338fe6"/>
+    </g>
+  </g>
+  <g id="Group_4737" data-name="Group 4737" transform="translate(6.219 14.518)">
+    <g id="Group_4736" data-name="Group 4736">
+      <rect id="Rectangle_2958" data-name="Rectangle 2958" width="3.234" height="36.67" rx="1.617" transform="translate(0 3.234) rotate(-90)" fill="#d47780"/>
+    </g>
+  </g>
+  <g id="Group_4739" data-name="Group 4739" transform="translate(6.219 7.664)">
+    <g id="Group_4738" data-name="Group 4738" transform="translate(0)">
+      <rect id="Rectangle_2959" data-name="Rectangle 2959" width="3.234" height="36.67" rx="1.617" transform="translate(0 3.234) rotate(-90)" fill="#338fe6"/>
+    </g>
+  </g>
+</svg>
